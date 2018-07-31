@@ -1,0 +1,25 @@
+Kopier alle filer til c:\windows\scripts\SUNDLAB\
+Kopier shortcut MAPDRIVELAB til desktop
+Kopier shortcut "Disconnect MAPDRIVELAB" til desktop
+Tilret mapdrivelab shortcut med korrekt storage sti
+
+Fra MapdriveLAB.ps1:
+
+# 
+# Prompt for username and password
+# Mapdrive afterwards
+# Share variable from parameter call of mapdriveLAB.cmd
+# Mapdrive parameter inserted into shortcut
+# mapdriveLAB.cmd calls mapdriveLAB.ps1
+# ex. C:\Windows\Scripts\XXXXLAB\MAPDriveLAB.cmd \\domain.string.se\groups\BRIC\ftp
+
+KRAV
+VLAN skal være XXXXLAB eller XXXXLABRED
+XXXXLAB benyttes til computer som ikke opfylder kravet om windows update og Antivirus. Computeren vil ikke være domain joined, logon med lokal konto
+XXXXLABRED benyttes til computer med OS som er usupporteret  fx. XP
+
+MapdriveLAB benyttes til at montere L-drev mod fx. FTP områderne via protokollen SMB
+
+Computer som er under kontrol (installeret efter images eller opfylder kravet om windows update, Antivirus og domain joined) tilkobles client net (grønt net)
+og kan logges på med brugerens egen credentials.
+Hvis der skal benyttes en generisk konto, må den KUN bruges til computeren (logon begrænsning i AD)
